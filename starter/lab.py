@@ -14,7 +14,7 @@ records = int(input("How many records? "))
 price_per_thousand = float(input("Price per thousand records? "))
 
 # Step 4: the rate is per THOUSAND records, so divide before you multiply.
-base_cost = 0.0
+base_cost = records / 1000 * price_per_thousand
 
 # Step 5: replace this with an if / elif / else chain that sets the rate to
 # 0.0, 0.10, or 0.20 depending on how many records there are.
