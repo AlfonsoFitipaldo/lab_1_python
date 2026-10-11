@@ -27,8 +27,8 @@ else:
 
 final_cost = base_cost * (1 - discount_rate)
 
-# Step 7: compare the final cost against the budget.
-is_within_budget = final_cost <= 1.00
+# A comparison gives a bool (True / False), not a number.
+within_budget = final_cost <= 1.00
 
 # Money uses :.2f so it always shows two decimals; the discount uses :.0%.
 print()
@@ -36,4 +36,4 @@ print(f"Records:       {records}")
 print(f"Base cost:     ${base_cost:.2f}")
 print(f"Discount:      {discount_rate:.0%}")
 print(f"Final cost:    ${final_cost:.2f}")
-print(f"Within budget: {is_within_budget}")
+print(f"Within budget: {within_budget}")
