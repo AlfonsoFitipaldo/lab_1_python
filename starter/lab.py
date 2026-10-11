@@ -25,12 +25,13 @@ elif records >= 1000:
 else:
     discount_rate = 0.0
 
-final_cost = base_cost - (base_cost * discount_rate)
+final_cost = base_cost * (1 - discount_rate)
 
 # Step 7: compare the final cost against the budget.
 is_within_budget = final_cost <= 1.00
 
-# Step 6: these already use :.2f so the money always shows two decimals.
+# Money uses :.2f so it always shows two decimals; the discount uses :.0%.
+print()
 print(f"Records:       {records}")
 print(f"Base cost:     ${base_cost:.2f}")
 print(f"Discount:      {discount_rate:.0%}")
