@@ -16,9 +16,14 @@ price_per_thousand = float(input("Price per thousand records? "))
 # Step 4: the rate is per THOUSAND records, so divide before you multiply.
 base_cost = records / 1000 * price_per_thousand
 
-# Step 5: replace this with an if / elif / else chain that sets the rate to
-# 0.0, 0.10, or 0.20 depending on how many records there are.
-discount_rate = 0.0
+# Discount tier. Order matters: the chain stops at the first true condition,
+# so the largest tier is checked first (20000 would also pass >= 1000).
+if records >= 10000:
+    discount_rate = 0.20
+elif records >= 1000:
+    discount_rate = 0.10
+else:
+    discount_rate = 0.0
 
 final_cost = base_cost - (base_cost * discount_rate)
 
