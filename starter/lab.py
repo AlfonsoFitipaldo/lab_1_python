@@ -9,8 +9,9 @@ extra tools. This is one script, top to bottom.
 
 # Step 2 and 3: replace these two hardcoded values with input(),
 # converting the record count with int() and the price with float().
+# Records are a whole count, so int(); the price has decimals, so float().
 records = int(input("How many records? "))
-price_per_thousand = 0.18
+price_per_thousand = float(input("Price per thousand records? "))
 
 # Step 4: the rate is per THOUSAND records, so divide before you multiply.
 base_cost = 0.0
